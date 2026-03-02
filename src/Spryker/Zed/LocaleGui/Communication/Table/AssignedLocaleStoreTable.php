@@ -33,9 +33,6 @@ class AssignedLocaleStoreTable extends LocaleStoreTable
         $this->localeStoreQuery = $localeStoreQuery;
     }
 
-    /**
-     * @return string
-     */
     protected function getBaseUrlPath(): string
     {
         return 'assigned-locale-table';

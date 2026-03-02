@@ -25,19 +25,11 @@ class StoreTableExpander implements StoreTableExpanderInterface
 
     protected LocaleGuiToStoreFacadeInterface $storeFacade;
 
-    /**
-     * @param \Spryker\Zed\LocaleGui\Dependency\Facade\LocaleGuiToStoreFacadeInterface $storeFacade
-     */
     public function __construct(LocaleGuiToStoreFacadeInterface $storeFacade)
     {
         $this->storeFacade = $storeFacade;
     }
 
-    /**
-     * @param \Spryker\Zed\Gui\Communication\Table\TableConfiguration $config
-     *
-     * @return \Spryker\Zed\Gui\Communication\Table\TableConfiguration
-     */
     public function expandConfig(TableConfiguration $config): TableConfiguration
     {
         if (!$this->storeFacade->isDynamicStoreEnabled()) {

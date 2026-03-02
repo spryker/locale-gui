@@ -38,11 +38,6 @@ class SelectableLocaleStoreTableExpander implements LocaleStoreTableExpanderInte
      */
     protected const COLUMN_NAME = 'locale_name';
 
-    /**
-     * @param \Spryker\Zed\Gui\Communication\Table\TableConfiguration $config
-     *
-     * @return \Spryker\Zed\Gui\Communication\Table\TableConfiguration
-     */
     public function expandConfiguration(TableConfiguration $config): TableConfiguration
     {
         $config->setHeader(
@@ -56,11 +51,6 @@ class SelectableLocaleStoreTableExpander implements LocaleStoreTableExpanderInte
         return $config;
     }
 
-    /**
-     * @param string $urlPath
-     *
-     * @return string
-     */
     public function expandUrlPath(string $urlPath): string
     {
         return $urlPath . static::URL_PATH_PREFIX_SELECTABLE;

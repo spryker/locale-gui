@@ -19,9 +19,6 @@ class StoreLocaleFormDataProvider
      */
     protected $localeFacade;
 
-    /**
-     * @param \Spryker\Zed\LocaleGui\Dependency\Facade\LocaleGuiToLocaleFacadeInterface $localeFacade
-     */
     public function __construct(LocaleGuiToLocaleFacadeInterface $localeFacade)
     {
         $this->localeFacade = $localeFacade;

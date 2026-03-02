@@ -22,9 +22,6 @@ class LocaleGuiToStoreFacadeBridge implements LocaleGuiToStoreFacadeInterface
         $this->storeFacade = $storeFacade;
     }
 
-    /**
-     * @return bool
-     */
     public function isDynamicStoreEnabled(): bool
     {
         return $this->storeFacade->isDynamicStoreEnabled();

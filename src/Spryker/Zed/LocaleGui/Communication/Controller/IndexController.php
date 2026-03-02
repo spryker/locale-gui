@@ -23,11 +23,6 @@ class IndexController extends AbstractController
      */
     protected const PARAM_STORE_ID = 'store-id';
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     */
     public function assignedLocaleTableAction(Request $request): JsonResponse
     {
         $table = $this->getFactory()->createAssignedLocaleStoreTable($this->getIdStore($request));
@@ -37,11 +32,6 @@ class IndexController extends AbstractController
         );
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     */
     public function assignedLocaleTableSelectableAction(Request $request): JsonResponse
     {
         $table = $this->getFactory()->createSelectableAssignedLocaleStoreTable($this->getIdStore($request));
@@ -51,11 +41,6 @@ class IndexController extends AbstractController
         );
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     */
     public function availableLocaleTableSelectableAction(Request $request): JsonResponse
     {
         $table = $this->getFactory()->createSelectableAvailableLocaleStoreTable($this->getIdStore($request));
@@ -65,11 +50,6 @@ class IndexController extends AbstractController
         );
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return int|null
-     */
     protected function getIdStore(Request $request): ?int
     {
         $idStore = $request->get(static::PARAM_STORE_ID);

@@ -43,11 +43,6 @@ class AvailableLocalesStoreRelationTabs extends AbstractTabs
      */
     protected const ASSIGNED_TAB_TEMPLATE = '@LocaleGui/_partials/_tables/assignment-locale-table.twig';
 
-    /**
-     * @param \Generated\Shared\Transfer\TabsViewTransfer $tabsViewTransfer
-     *
-     * @return \Generated\Shared\Transfer\TabsViewTransfer
-     */
     protected function build(TabsViewTransfer $tabsViewTransfer): TabsViewTransfer
     {
         $this->addAvailableLocaleTab($tabsViewTransfer)

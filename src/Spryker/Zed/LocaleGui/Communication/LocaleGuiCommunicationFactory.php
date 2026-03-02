@@ -31,9 +31,6 @@ use Twig\Environment;
  */
 class LocaleGuiCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\LocaleGui\Communication\Form\DataProvider\StoreLocaleFormDataProvider
-     */
     public function createStoreLocaleFormDataProvider(): StoreLocaleFormDataProvider
     {
         return new StoreLocaleFormDataProvider(
@@ -41,9 +38,6 @@ class LocaleGuiCommunicationFactory extends AbstractCommunicationFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\LocaleGui\Communication\Form\StoreLocaleForm
-     */
     public function createStoreLocaleForm(): StoreLocaleForm
     {
         return new StoreLocaleForm();
@@ -64,11 +58,6 @@ class LocaleGuiCommunicationFactory extends AbstractCommunicationFactory
         );
     }
 
-    /**
-     * @param int|null $idStore
-     *
-     * @return \Spryker\Zed\LocaleGui\Communication\Table\LocaleStoreTable
-     */
     public function createSelectableAssignedLocaleStoreTable(?int $idStore): LocaleStoreTable
     {
         return new AssignedLocaleStoreTable(
@@ -78,11 +67,6 @@ class LocaleGuiCommunicationFactory extends AbstractCommunicationFactory
         );
     }
 
-    /**
-     * @param int|null $idStore
-     *
-     * @return \Spryker\Zed\LocaleGui\Communication\Table\LocaleStoreTable
-     */
     public function createSelectableAvailableLocaleStoreTable(?int $idStore): LocaleStoreTable
     {
         return new AvailableLocaleStoreTable(
@@ -92,33 +76,21 @@ class LocaleGuiCommunicationFactory extends AbstractCommunicationFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\LocaleGui\Communication\Expander\LocaleStoreTableExpanderInterface
-     */
     public function createLocaleStoreTableSelectableExpander(): LocaleStoreTableExpanderInterface
     {
         return new SelectableLocaleStoreTableExpander();
     }
 
-    /**
-     * @return \Spryker\Zed\LocaleGui\Dependency\Facade\LocaleGuiToLocaleFacadeInterface
-     */
     public function getLocaleFacade(): LocaleGuiToLocaleFacadeInterface
     {
         return $this->getProvidedDependency(LocaleGuiDependencyProvider::FACADE_LOCALE);
     }
 
-    /**
-     * @return \Spryker\Zed\LocaleGui\Dependency\Facade\LocaleGuiToStoreFacadeInterface
-     */
     public function getStoreFacade(): LocaleGuiToStoreFacadeInterface
     {
         return $this->getProvidedDependency(LocaleGuiDependencyProvider::FACADE_STORE);
     }
 
-    /**
-     * @return \Spryker\Zed\LocaleGui\Communication\Expander\StoreTableExpanderInterface
-     */
     public function createStoreTableExpander(): StoreTableExpanderInterface
     {
         return new StoreTableExpander($this->getStoreFacade());
@@ -140,25 +112,16 @@ class LocaleGuiCommunicationFactory extends AbstractCommunicationFactory
         return $this->getProvidedDependency(LocaleGuiDependencyProvider::PROPEL_QUERY_LOCALE);
     }
 
-    /**
-     * @return \Twig\Environment
-     */
     public function getTwigEnvironment(): Environment
     {
         return $this->getProvidedDependency(LocaleGuiDependencyProvider::RENDERER);
     }
 
-    /**
-     * @return \Spryker\Zed\LocaleGui\Communication\Tabs\AvailableLocalesStoreRelationTabs
-     */
     public function createAvailableLocaleRelationTabs(): AvailableLocalesStoreRelationTabs
     {
         return new AvailableLocalesStoreRelationTabs();
     }
 
-    /**
-     * @return \Spryker\Zed\LocaleGui\Communication\Tabs\AssignedLocalesStoreRelationTabs
-     */
     public function createAssignedLocaleRelationTabs(): AssignedLocalesStoreRelationTabs
     {
         return new AssignedLocalesStoreRelationTabs();

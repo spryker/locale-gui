@@ -62,11 +62,6 @@ class StoreLocaleForm extends AbstractType
         });
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormEvent $formEvent
-     *
-     * @return void
-     */
     protected function executePreSubmitHandler(FormEvent $formEvent): void
     {
         $eventData = $formEvent->getData();
@@ -121,11 +116,6 @@ class StoreLocaleForm extends AbstractType
         return $this;
     }
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         parent::configureOptions($resolver);

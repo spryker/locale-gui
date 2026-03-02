@@ -36,9 +36,6 @@ class AvailableLocaleStoreTable extends LocaleStoreTable
         $this->localeQuery = $localeQuery;
     }
 
-    /**
-     * @return string
-     */
     protected function getBaseUrlPath(): string
     {
         return 'available-locale-table';

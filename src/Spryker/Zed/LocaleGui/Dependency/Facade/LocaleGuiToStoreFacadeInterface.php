@@ -9,8 +9,5 @@ namespace Spryker\Zed\LocaleGui\Dependency\Facade;
 
 interface LocaleGuiToStoreFacadeInterface
 {
-    /**
-     * @return bool
-     */
     public function isDynamicStoreEnabled(): bool;
 }
